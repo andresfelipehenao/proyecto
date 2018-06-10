@@ -3,6 +3,8 @@
 
 #include "Profesor.h"
 #include "Estudiante.h"
+#include "usuario.h"
+#include "multa.h"
 using namespace std;
 
 class Articulo
@@ -29,7 +31,7 @@ public:
     void darnombre(string nombre);
     string obtenernombre();
     void darvalor (int valor);
-    int obtenervalor;
+    int obtenervalor();
     Profesor darprofesor(Profesor profesor);
     Profesor obtenerprofesor();
     int darfechaprestamo(int  fechaprestamo);
