@@ -12,7 +12,8 @@ Articulo::Articulo()
 }
 
 Articulo::Articulo(int identificador, bool estado, string nombre, int valor, Profesor profesor,
-             int fechaprestamo, Estudiante estudiante, int fechaDevolucion);
+                   int fechaprestamo, Estudiante estudiante, int fechaDevolucion)
+{
 
     this->identificador= identificador;
     this->estado = estado;
@@ -22,69 +23,116 @@ Articulo::Articulo(int identificador, bool estado, string nombre, int valor, Pro
     this->fechaPrestano = fechaPrestamo;
     this->estudiante = estudiante;
     this->fechaDevolucion = fechaDevolucion;
+}
 
 
-  void Articulo::daridentificador(int identificador){
+void Articulo::daridentificador(int identificador)
+{
     this->identificador= identificador;
-  }
+}
 
-  int obteneridentificador(){
+int obteneridentificador()
+{
     return identificador;
-  }
-  void Articulo::darestado(bool estado){
-  this->estado = estado;
-  }
-  bool obtenerestado(){
-  return estado;
-  }
+}
+void Articulo::darestado(bool estado)
+{
+    this->estado = estado;
+}
+bool obtenerestado()
+{
+    return estado;
+}
 
-  void Articulo::darnombre (string nombre){
-  }
-  string obtenernombre(){
-  return nombre;
-  }
+void Articulo::darnombre (string nombre)
+{
+}
+string obtenernombre()
+{
+    return nombre;
+}
 
-  void Articulo::darvalor (int valor){
+void Articulo::darvalor (int valor)
+{
 
-  }
-  int obtenervalor(){
-  return valor;
-  }
+}
+int obtenervalor()
+{
+    return valor;
+}
 
-  void Profesor::darprofesor (Profesor profesor){
-      this->profesor = profesor;
-  }
-  Profesor obtenerprofesor(){
-  return profesor;
-  }
+void Profesor::darprofesor (Profesor profesor)
+{
+    this->profesor = profesor;
+}
+Profesor obtenerprofesor()
+{
+    return profesor;
+}
 
-  void Articulo::darfechaprestamo (int fechaprestamo){
-   this->fechaPrestano = fechaPrestamo;
-  }
-  int obtenerfechaprestamo(){
-  return fechaprestamo;
-  }
-  Estudiante::darestudiante (Estudiante estudiante){
-  this->estudiante = estudiante;
-  }
-  Estudiante obtenerestudiante(){
-  return estudiante;
-  }
+void Articulo::darfechaprestamo (int fechaprestamo)
+{
+    this->fechaPrestano = fechaPrestamo;
+}
+int obtenerfechaprestamo()
+{
+    return fechaprestamo;
+}
+Estudiante::darestudiante (Estudiante estudiante)
+{
+    this->estudiante = estudiante;
+}
+Estudiante obtenerestudiante()
+{
+    return estudiante;
+}
 
-  void Articulo::darfechadevolucion (int fechadevolucion){
+void Articulo::darfechadevolucion (int fechadevolucion)
+{
     this->fechaDevolucion = fechaDevolucion;
-  }
-  int obtenerfechadevolucion(){
+}
+int obtenerfechadevolucion()
+{
+    return fechadevolucion;
+}
 
-  return fechadevolucion;
+void Articulo::depreciarmuebles (int identificadorTiempo)
+{
+    if ((identificadorTiempo-valor)< valor)
+    {
+        estado = false;
+        valor=0;
+    }
+    else
+    {
+        valor=(identificadorTiempo-valor);
+    }
+}
+void Articulo::depreciarcomputo (int identificadorTiempo)
+{
+     if ((identificadorTiempo-valor)< valor)
+    {
+        estado = false;
+        valor=0;
+    }
+    else
+    {
+        valor=(identificadorTiempo-valor);
+    }
 
-  }
+}
+void Articulo::depreciarprestamos (int identificadorTiempo)
+{
+     if ((identificadorTiempo-valor)< valor)
+    {
+        estado = false;
+        valor=0;
+    }
+    else
+    {
+        valor=(identificadorTiempo-valor);
+    }
 
-  void Articulo::depreciarmuebles (int identificadorTiempo){
-      if el valor es mayor identificador de tiempo deje inactivo el identificador
-  }
-  void Articulo::depreciarcomputo (int identificadorTiempo){
-  }
-  void Articulo::depreciarprestamos (int identificadorTiempo){
-  }
+
+}
 
