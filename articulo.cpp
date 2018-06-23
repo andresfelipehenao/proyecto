@@ -1,102 +1,115 @@
-
+#pragma once
 #include "Profesor.h"
 #include "Estudiante.h"
 #include "usuario.h"
 #include "multa.h"
+#include "articulo.h"
 
 using namespace std;
 
-
-Articulo::Articulo()
+articulo::articulo()
 {
+
 }
 
-Articulo::Articulo(int identificador, bool estado, string nombre, int valor, Profesor profesor,
-                   int fechaprestamo, Estudiante estudiante, int fechaDevolucion)
-{
 
+/**articulo::articulo(string tipo,int identificador, bool estado, string nombre, int valor, Profesor profesor,
+                   int fechaPrestamo, Estudiante estudiante, int fechaDevolucion)
+{
+    this->tipo = tipo;
     this->identificador= identificador;
     this->estado = estado;
     this->nombre = nombre;
     this->valor = valor;
     this->profesor = profesor;
-    this->fechaPrestano = fechaPrestamo;
+    this->fechaPrestamo = fechaPrestamo;
     this->estudiante = estudiante;
     this->fechaDevolucion = fechaDevolucion;
+}*/
+
+articulo::articulo(string tipo,int identificador, bool estado, string nombre, int valor, Profesor profesor)
+{
+    this->tipo = tipo;
+    this->identificador= identificador;
+    this->estado = estado;
+    this->nombre = nombre;
+    this->valor = valor;
+    this->profesor = profesor;
 }
 
 
-void Articulo::daridentificador(int identificador)
+void articulo::daridentificador(int identificador)
 {
     this->identificador= identificador;
 }
 
-int obteneridentificador()
+int articulo::obteneridentificador()
 {
-    return identificador;
+        return identificador;
 }
-void Articulo::darestado(bool estado)
+void articulo::darestado(bool estado)
 {
     this->estado = estado;
 }
-bool obtenerestado()
+bool articulo::obtenerestado()
 {
     return estado;
 }
 
-void Articulo::darnombre (string nombre)
+void articulo::darnombre (string nombre)
 {
 }
-string obtenernombre()
+string articulo::obtenernombre()
 {
     return nombre;
 }
 
-void Articulo::darvalor (int valor)
+void articulo::darvalor (int valor)
 {
 
 }
-int obtenervalor()
+int articulo::obtenervalor()
 {
     return valor;
 }
 
-void Profesor::darprofesor (Profesor profesor)
+void articulo::darprofesor (Profesor profesor)
 {
     this->profesor = profesor;
 }
-Profesor obtenerprofesor()
+Profesor articulo::obtenerprofesor()
 {
     return profesor;
 }
 
-void Articulo::darfechaprestamo (int fechaprestamo)
+void articulo::darfechaprestamo (int fechaPrestamo)
 {
-    this->fechaPrestano = fechaPrestamo;
+    this->fechaPrestamo = fechaPrestamo;
 }
-int obtenerfechaprestamo()
+int articulo::obtenerfechaprestamo()
 {
-    return fechaprestamo;
+    return fechaPrestamo;
 }
-Estudiante::darestudiante (Estudiante estudiante)
+void articulo::darestudiante(Estudiante estudiante)
 {
     this->estudiante = estudiante;
 }
-Estudiante obtenerestudiante()
+
+Estudiante articulo::obtenerestudiante()
 {
     return estudiante;
 }
 
-void Articulo::darfechadevolucion (int fechadevolucion)
+void articulo::darfechadevolucion (int fechadevolucion)
 {
     this->fechaDevolucion = fechaDevolucion;
 }
-int obtenerfechadevolucion()
+int articulo::obtenerfechadevolucion()
 {
-    return fechadevolucion;
+    return fechaDevolucion;
 }
 
-void Articulo::depreciarmuebles (int identificadorTiempo)
+void articulo::depreciarmuebles(int identificadorTiempo)
 {
     if ((identificadorTiempo-valor)< valor)
     {
@@ -108,7 +121,7 @@ void Articulo::depreciarmuebles (int identificadorTiempo)
         valor=(identificadorTiempo-valor);
     }
 }
-void Articulo::depreciarcomputo (int identificadorTiempo)
+void articulo::depreciarcomputo (int identificadorTiempo)
 {
      if ((identificadorTiempo-valor)< valor)
     {
@@ -121,7 +134,7 @@ void Articulo::depreciarcomputo (int identificadorTiempo)
     }
 
 }
-void Articulo::depreciarprestamos (int identificadorTiempo)
+void articulo::depreciarprestamos (int identificadorTiempo)
 {
      if ((identificadorTiempo-valor)< valor)
     {
@@ -133,6 +146,16 @@ void Articulo::depreciarprestamos (int identificadorTiempo)
         valor=(identificadorTiempo-valor);
     }
 
+}
 
+
+string articulo::obtenerTipo()
+{
+    return tipo;
+}
+
+void articulo::darTipo(string tipo)
+{
+    this->tipo=tipo;
 }
 

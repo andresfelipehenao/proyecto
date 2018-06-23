@@ -8,22 +8,22 @@ using namespace std;
 class usuario
 {
 private:
-    int idetnificador;
+    int identificador;
     string nombre;
     int codigo;
     int telefono;
 
 
 public:
-    usuario(int identificador, string nombre, int codigo int telefono);
+    usuario(int identificador, string nombre, int codigo, int telefono);
     usuario();
     ~usuario();
-    void daridenificador (int identificador);
+    void daridentificador (int identificador);
     int obteneridentificador();
     bool obtenerestado();
     void darnombre(string nombre);
     string obtenernombre();
-    void darcodigo (int codigp);
+    void darcodigo (int codigo);
     int obtenercodigo();
     void dartelefono(int telefono);
     int obtenertelefono();

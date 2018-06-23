@@ -1,5 +1,7 @@
 #ifndef ESTUDIANTE_H
 #define ESTUDIANTE_H
+
+#include <string>
 using namespace std;
 
 
@@ -9,12 +11,12 @@ private:
     int identificador;
     string nombre;
     int telefono;
-    int codigo;
+    int multa;
 
 public:
     Estudiante();
-    Estudiante(int identificador, string nombre, int telefono, int codigo);
-    
+    Estudiante(int identificador, string nombre, int telefono, int multa);
+
     ~Estudiante();
     void daridentificador(int identificador);
     int obteneridentificador();
@@ -22,10 +24,11 @@ public:
     string obtenernombre();
     void dartelefono( int telefono);
     int obtenertelefono();
-    void darcodigo(int codigo);
-    int obtenercodigo();
+    void darmulta(int codigo);
+    int obtenermulta();
 
 
 };
 
 #endif // ESTUDIANTE_H
+

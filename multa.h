@@ -2,19 +2,18 @@
 #define MULTA_H
 
 
-class multa(
-private:
+class multa {
+
+public:
     int valor;
     int fechadepago;
     int fechademulta;
 
-
-public:
-    usuario(int valor,int fechadepago, int fechademulta;
-    usuario();
-    ~usuario();
+    multa();
+    multa(int valor,int fechadepago, int fechademulta);
+    ~multa();
     void darvalor (int valor);
-    int obtenervalor;
+    int obtenervalor();
     void darfechadepago (int fechadepago);
     int obtenerfechadepago();
     void darfechamulta(int fechamulta);
